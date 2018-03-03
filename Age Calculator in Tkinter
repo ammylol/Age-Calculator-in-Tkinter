@@ -32,6 +32,8 @@ class Age_Calculator(Tk):
         self.var_date.set(self.current_date_for_entry.day)
         self.var_month.set(self.current_date_for_entry.month)
         self.var_year.set(self.current_date_for_entry.year)
+        self.var_hour.set(self.current_date_for_entry.hour)
+        self.var_minute.set(self.current_date_for_entry.minute)
 
         self.button = Button(text='Calculate', command=self.Age, bg="yellow").grid(row=5, column=0, columnspan=3)
 
