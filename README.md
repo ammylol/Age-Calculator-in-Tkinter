@@ -203,25 +203,25 @@ class Age_Calculator(Tk):
         if self.date == 31 and (self.month == 4 or self.month == 6 or self.month == 9 or self.month == 11):
             self.warning_label_1 = Label(text='There are only\n30 days in\n' + str(self.month) + 'th Month of year',
                                          bg="red")
-            self.warning_label_1.grid(row=5, column=0, columnspan=3)
+            self.warning_label_1.grid(row=6, column=0, columnspan=3)
 
 # if birth date is bigger than 28 and birth month is february and birth year is not leap year then
 # show warning that there are only 28 days in february without leap year
         if self.date > 28 and self.month == 2 and self.leapyearid == False:
             self.warning_label_2 = Label(text='There are only\n28 days in\nFeburary Month', bg="red")
-            self.warning_label_2.grid(row=5, column=0, columnspan=3)
+            self.warning_label_2.grid(row=6, column=0, columnspan=3)
 
 # if birth date is bigger than 29 and birth month is february and birth year is leap year then
 # show warning that there are only 29 days in february with leap year
         if self.date > 29 and self.month == 2 and self.leapyearid == True:
             self.warning_label_3 = Label(text='There are only\n29 days in\nFeburary Month of\nLeapyear', bg="red")
-            self.warning_label_3.grid(row=5, column=0, columnspan=3)
+            self.warning_label_3.grid(row=6, column=0, columnspan=3)
 
 # if birth date = current day and birth month = current month then wish the person 'happy birthday'
         if self.date == self.current_date.day and self.month == self.current_date.month:
             self.birthday = Label(text=('Happy Birthday\nto you on\nyour ' + str(self.calculated_year) + ' Birthday'),
                                   bg="yellow")
-            self.birthday.grid(row=5, column=0, columnspan=3)
+            self.birthday.grid(row=6, column=0, columnspan=3)
 
 # Running the calculator
 Age_Calculator().mainloop()
